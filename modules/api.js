@@ -1,9 +1,9 @@
-import { barbieDolls } from "./array.js";
+import { barbieDollsArr } from "./array.js";
 export {getObj};
 
 async function postData(barbie) {
   const url = "https://striveschool-api.herokuapp.com/api/product/";
-  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIwZjk0YTkxM2Y2NTAwMThkMDhmNWYiLCJpYXQiOjE3MDYwOTY5NzEsImV4cCI6MTcwNzMwNjU3MX0.e9FEwpqS2Jf1jwWZ6XEUV5tX8N8Gc1kSdZeRtVIUszk";
+  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIxMDk4NjkxM2Y2NTAwMThkMDkwMmQiLCJpYXQiOjE3MDYxMDExMjYsImV4cCI6MTcwNzMxMDcyNn0.ik6-rJhrbYbiuuXY6PgO5zxqEtjxW2BA10T0rY4dk9k";
 
   const options = {
     method: 'POST',
@@ -23,7 +23,7 @@ async function postData(barbie) {
 }
 
 async function processBarbies() {
-  for (const barbie of barbieDolls) {
+  for (const barbie of barbieDollsArr) {
     await postData(barbie);
   }
 }
@@ -35,7 +35,7 @@ processBarbies();
   const getObj = async () => {
     try {
         const url = "https://striveschool-api.herokuapp.com/api/product/";
-        const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIwZjk0YTkxM2Y2NTAwMThkMDhmNWYiLCJpYXQiOjE3MDYwOTY5NzEsImV4cCI6MTcwNzMwNjU3MX0.e9FEwpqS2Jf1jwWZ6XEUV5tX8N8Gc1kSdZeRtVIUszk"; 
+        const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIxMDk4NjkxM2Y2NTAwMThkMDkwMmQiLCJpYXQiOjE3MDYxMDExMjYsImV4cCI6MTcwNzMxMDcyNn0.ik6-rJhrbYbiuuXY6PgO5zxqEtjxW2BA10T0rY4dk9k"; 
 
         const options = {
             method: 'GET',

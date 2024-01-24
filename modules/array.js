@@ -1,6 +1,6 @@
-export {barbieDolls};
+export {barbieDollsArr};
 
-const barbieDolls = [
+const barbieDollsArr = [
   {
     name: "Barbie Dreamhouse",
     description: "La Dreamhouse di Barbie è la casa dei sogni per ogni bambina. Con le sue cinque camere da letto, quattro bagni, una piscina e un garage, la Dreamhouse offre infinite possibilità di gioco.",
@@ -19,7 +19,7 @@ const barbieDolls = [
     name: "Barbie Chelsea",
     description: "Le Barbie Chelsea sono le bamboline più piccole della famiglia Barbie. Con i loro vestiti adorabili e gli accessori divertenti, le Barbie Chelsea sono perfette per le bambine più piccole.",
     brand: "Mattel",
-    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmD5bsX8-VNfXayq9R9tTFaMNCsqj9FMHj4A&usqp=CAU",
+    imageUrl: "https://m.media-amazon.com/images/I/71A42uw1KwL.jpg",
     price: 19.99,
   },
   {
