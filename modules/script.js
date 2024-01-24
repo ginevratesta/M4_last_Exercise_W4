@@ -1,4 +1,4 @@
-import { dolls, marketPlace, navBar, row, formattedHTMLCard } from "./markup.js";
+import { dolls, row, formattedHTMLCard } from "./markup.js";
 
 const displayCards = () => {
    dolls.forEach( doll => {
@@ -7,3 +7,5 @@ const displayCards = () => {
 };
 
 displayCards();
+
+

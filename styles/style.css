@@ -1,12 +1,13 @@
-.row img{
-    aspect-ratio: 1/2;
-    object-fit: cover;
+.row img {
+  aspect-ratio: 1/2;
+  object-fit: cover;
+  height: 500px;
 }
 
-.card-body{
-    height: 300px;
-    background-color: #E53D7A;
-    color: white;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+.card-body {
+  height: 250px;
+  background-color: #e53d7a;
+  color: white;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
