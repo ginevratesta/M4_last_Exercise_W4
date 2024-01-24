@@ -1,51 +1,29 @@
-// import { barbiePassions } from "./array.js";
+import { getObj } from "./api.js";
 
-// barbiePassions.forEach( async (barbie) => {
-//     try {
-      
-//       const url = "https://striveschool-api.herokuapp.com/api/product/";
-//       const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIwMDMyY2EwNGNiODAwMThhZDk0ZDYiLCJpYXQiOjE3MDYwMzM5NjQsImV4cCI6MTcwNzI0MzU2NH0.0Fopt8ejefWU0_VicvjGQo9Yv1QaBkCqtB6i64b8634";
-  
-//       const options = {
-//         method: 'POST',
-//         headers: {
-//           'Content-Type': 'application/json',
-//           'Authorization': `Bearer ${key}`
-//         },
-//         body: JSON.stringify(barbie)
-//       };
-  
-//       const response = await fetch(url, options);
-//       const data = await response.json();
+const dolls = await getObj();
+const marketPlace = document.getElementById("market-place")
+const navBar = document.createElement("div");
+marketPlace.prepend(navBar);
+let row = document.createElement("div");
+row.classList.add("row", "py-5", "px-5", "justify-content-center" );
+marketPlace.append(row);
 
-//     } 
-//     catch (error) {
-//         console.error('Error:' + error);
-//       }
-//   });
-
-
-  const getObj = async () => {
-    try {
-        const url = "https://striveschool-api.herokuapp.com/api/product/";
-        const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIwMDMyY2EwNGNiODAwMThhZDk0ZDYiLCJpYXQiOjE3MDYwMzM5NjQsImV4cCI6MTcwNzI0MzU2NH0.0Fopt8ejefWU0_VicvjGQo9Yv1QaBkCqtB6i64b8634"; 
-
-        const options = {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${key}`
-            },
-        };
-
-        const response = await fetch(url, options);
-        const data = await response.json();
-
-            console.log("Whole array:", data);
-    } catch (error) {
-        console.error('Error:' + error);
-        alert(error);
-    }
+const displayCards = () => {
+   dolls.forEach( doll => {
+    row.innerHTML += `
+    <div class="col-lg-3">
+    <div id="${doll.id}" class="card mb-5">
+  <img src="${doll.imageUrl}" class="card-img-top" alt="Toy cover">
+  <div class="card-body">
+    <h5 class="card-title">${doll.name}</h5>
+    <p class="card-text text-truncate">${doll.description}</p>
+    <p>Brand: ${doll.brand}</p>
+    <p>${doll.price}</p>
+    <a href="./details.html" class="btn btn-primary">Details</a>
+  </div>
+</div>
+</div>`
+   });
 };
 
-getObj();
+displayCards();
