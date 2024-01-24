@@ -1,5 +1,5 @@
 import { getObj } from "./api.js";
-export { dolls, marketPlace, navBar, row, formattedHTMLCard };
+export { dolls, row, formattedHTMLCard };
 
 const dolls = await getObj();
 
@@ -29,7 +29,7 @@ const formattedHTMLCard = (doll) => {
     <p class="card-text text-truncate">${doll.description}</p>
     <p>Brand: ${doll.brand}</p>
     <p>${doll.price}</p>
-    <a href="./details.html?=${doll._id}" class="btn btn-primary">Details</a>
+    <a href="./details.html?id=${doll._id}" class="btn btn-primary">Details</a>
   </div>
 </div>
 </div>`;
