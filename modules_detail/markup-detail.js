@@ -17,7 +17,7 @@ const formattedHTMLDetail = (dollDetail) => {
     <div class="card mb-3 ">
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="${dollDetail.imageUrl}" class="img-fluid rounded-start" alt="">
+      <img src="${dollDetail.imageUrl}" class="img-fluid rounded-start" alt="Barbie cover">
     </div>
     <div id="card" class="col-md-8">
       <div class="card-body pe-5 pt-5">

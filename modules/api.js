@@ -53,4 +53,4 @@ processBarbies();
     }
 };
 
-getObj();
+// getObj();
