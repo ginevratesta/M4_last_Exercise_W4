@@ -1,4 +1,15 @@
-import {dollsAdmin, dollsDisplay, formattedHTMLCard, addBtn, title, description, brand, img, price, deleteBtn, modifyBtn} from "./markup-backoffice.js";
+import {
+  dollsAdmin,
+  dollsDisplay,
+  formattedHTMLCard,
+  addBtn,
+  title,
+  description,
+  brand,
+  img,
+  price,
+  deleteBtn
+} from "./markup-backoffice.js";
 import { postData } from "../modules/api.js";
 import { deleteData } from "./api-backoffice.js";
 
@@ -12,6 +23,7 @@ const displayDollsOptions = () => {
 };
 
 displayDollsOptions();
+
 
 addBtn.addEventListener("click", async () => {
   let barbie = {
@@ -29,9 +41,16 @@ for (const button of deleteBtn) {
   button.addEventListener("click", async (event, cardId) => {
     await deleteData(event, cardId);
   });
+}
+
+const functionPut = async () => {
+  console.log("ciao");
 };
 
-console.log(modifyBtn);
+const modifyBtn = document.querySelector(".put-button");
+modifyBtn.addEventListener("click", async () => {
+  await functionPut();
+});
 
 // const modifyObj = async () => {
 //     try {

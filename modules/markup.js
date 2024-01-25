@@ -32,7 +32,7 @@ const formattedHTMLCard = (doll) => {
     <h5 class="card-title">${doll.name}</h5>
     <p class="card-text text-truncate">${doll.description}</p>
     <p>Brand: ${doll.brand}</p>
-    <p>${doll.price}</p>
+    <p>Price: ${doll.price}</p>
     <a href="./details.html?id=${doll._id}" class="btn btn-primary">Details</a>
   </div>
 </div>
