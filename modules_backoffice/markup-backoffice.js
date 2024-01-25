@@ -19,7 +19,8 @@ dollsDisplay.classList.add(
   "d-flex",
   "align-items-center",
   "flex-column",
-  "py-5"
+  "py-5",
+  "w-100"
 );
 
 const formHolder = document.getElementById("form");
