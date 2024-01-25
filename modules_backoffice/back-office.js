@@ -1,4 +1,5 @@
-import {dollsAdmin, dollsDisplay, formattedHTMLCard} from "./markup-backoffice.js";
+import {dollsAdmin, dollsDisplay, formattedHTMLCard, addBtn, title, description, brand, img, price} from "./markup-backoffice.js";
+import {postData} from "../modules/api.js";
 
 const displayDollsOptions = () => {
 dollsAdmin.forEach(doll => {
@@ -7,6 +8,21 @@ dollsAdmin.forEach(doll => {
 };
 
 displayDollsOptions();
+
+addBtn.addEventListener("click", () => {
+    console.log("clicked");
+});
+
+// addBtn.addEventListener("click", async (event) => {
+//     let barbie = {
+//         name: title.value,
+//         description: description.value,
+//         brand: brand.value,
+//         imageUrl: img.value,
+//         price: price.value,
+//     }
+//     await postData(barbie);
+// })
 
 // for (const button of deleteBtn) {
 //   button.addEventListener("click", async (event) => {

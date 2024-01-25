@@ -1,5 +1,5 @@
 import { barbieDollsArr } from "./array.js";
-export {getObj};
+export {getObj, postData};
 
 async function postData(barbie) {
   const url = "https://striveschool-api.herokuapp.com/api/product/";
@@ -49,7 +49,7 @@ processBarbies();
         return data;
     } catch (error) {
         console.error('Error:' + error);
-        alert(error);
+        // alert(error);
     }
 };
 
