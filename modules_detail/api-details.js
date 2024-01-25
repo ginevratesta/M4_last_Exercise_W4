@@ -9,7 +9,6 @@ const getObjId = async () => {
         const options = {
             method: 'GET',
             headers: {
-                'Content-Type': 'application/json',
                 'Authorization': `Bearer ${key}`
             },
         };

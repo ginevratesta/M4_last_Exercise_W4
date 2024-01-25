@@ -18,7 +18,6 @@ const deleteData = async (event) => {
       const options = {
         method: "DELETE",
         headers: {
-          "Content-Type": "application/json",
           Authorization: `Bearer ${key}`,
         },
       };
