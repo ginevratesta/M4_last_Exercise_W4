@@ -4,7 +4,7 @@ const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
 
-const dollDetail = await getObjId();
+const dollDetail = await getObjId(id);
 
 const detailsContainer = document.getElementById("details");
 const rowDetail = document.createElement("div");

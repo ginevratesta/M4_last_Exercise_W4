@@ -1,5 +1,5 @@
 import { getObj } from "./api.js";
-export { dolls, row, formattedHTMLCard, deleteBtn };
+export { dolls, row, formattedHTMLCard };
 
 const dolls = await getObj();
 
@@ -33,13 +33,9 @@ const formattedHTMLCard = (doll) => {
     <p class="card-text text-truncate">${doll.description}</p>
     <p>Brand: ${doll.brand}</p>
     <p>${doll.price}</p>
-    <div class="d-flex justify-content-around">
     <a href="./details.html?id=${doll._id}" class="btn btn-primary">Details</a>
-    <a href="" class="btn btn-primary delete-btn">Delete</a>
-    </div>
   </div>
 </div>
 </div>`;
 };
 
-const deleteBtn = document.getElementsByClassName("delete-btn");
