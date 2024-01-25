@@ -1,4 +1,4 @@
-import {dollsAdmin, dollsDisplay, formattedHTMLCard, addBtn, title, description, brand, img, price} from "./markup-backoffice.js";
+import {dollsAdmin, dollsDisplay, formattedHTMLCard, addBtn, deleteBtn, title, description, brand, img, price} from "./markup-backoffice.js";
 import {postData} from "../modules/api.js";
 
 const displayDollsOptions = () => {
@@ -9,55 +9,64 @@ dollsAdmin.forEach(doll => {
 
 displayDollsOptions();
 
-addBtn.addEventListener("click", () => {
-    console.log("clicked");
-});
 
-// addBtn.addEventListener("click", async (event) => {
-//     let barbie = {
-//         name: title.value,
-//         description: description.value,
-//         brand: brand.value,
-//         imageUrl: img.value,
-//         price: price.value,
-//     }
-//     await postData(barbie);
-// })
+addBtn.addEventListener("click", async () => {
+    let barbie = {
+        name: title.value,
+        description: description.value,
+        brand: brand.value,
+        imageUrl: img.value,
+        price: price.value,
+    }
+    await postData(barbie);
+    window.location.reload()
+})
 
-// for (const button of deleteBtn) {
-//   button.addEventListener("click", async (event) => {
-//     event.preventDefault();
-//     const card = event.target.closest(".card");
-//     const cardId = card.id;
+console.log(dollsAdmin);
 
-//     const confirmDeletion = confirm("Are you sure you want to delete this item?");
+const deleteData = async (event) => {
+    const card = event.target.closest(".card");
+    const cardId = card.id;
+    console.log(cardId);
+
+    const confirmDeletion = confirm("Are you sure you want to delete this item?");
     
-//     if (!confirmDeletion) {
-//       return; 
-//     }
+    if (!confirmDeletion) {
+      return; 
+    }
 
-//     try {
-//       const url = `https://striveschool-api.herokuapp.com/api/product/${cardId}`;
-//       const key = "your_auth_token";
+    try {
+      const url = `https://striveschool-api.herokuapp.com/api/product/${cardId}`;
+      const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIxMDk4NjkxM2Y2NTAwMThkMDkwMmQiLCJpYXQiOjE3MDYxMDExMjYsImV4cCI6MTcwNzMxMDcyNn0.ik6-rJhrbYbiuuXY6PgO5zxqEtjxW2BA10T0rY4dk9k";
 
-//       const options = {
-//         method: "DELETE",
-//         headers: {
-//           "Content-Type": "application/json",
-//           Authorization: `Bearer ${key}`,
-//         },
-//       };
+      const options = {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${key}`,
+        },
+      };
 
-//       await fetch(url, options);
+      await fetch(url, options);
 
-//       card.remove();
+     window.location.reload();
 
-//     } catch (error) {
-//       console.error("Error:", error);
-//       alert("Failed to delete item. Please try again.");
-//     }
-//   });
-// }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Failed to delete item. Please try again.");
+    }
+  };
+
+for (const button of deleteBtn) {
+button.addEventListener("click", async (event, cardId) => {
+   await deleteData(event, cardId)
+    
+});
+};
+
+
+
+
 
 
 
