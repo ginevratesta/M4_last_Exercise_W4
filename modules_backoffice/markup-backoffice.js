@@ -4,7 +4,6 @@ export {
   dollsDisplay,
   formattedHTMLCard,
   addBtn,
-  barbieId,
   title,
   description,
   brand,
@@ -32,7 +31,6 @@ homePage.textContent = "Homepage";
 formHolder.prepend(homePage);
 
 const addBtn = document.getElementById("post-button");
-const barbieId = document.getElementById("id")
 const title = document.getElementById("title");
 const description = document.getElementById("content");
 const brand = document.getElementById("brand");

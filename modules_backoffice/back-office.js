@@ -1,4 +1,4 @@
-import { dollsAdmin, dollsDisplay, formattedHTMLCard, addBtn, barbieId, title, description, brand, img, price, deleteBtn, createModal } from "./markup-backoffice.js";
+import { dollsAdmin, dollsDisplay, formattedHTMLCard, addBtn, title, description, brand, img, price, deleteBtn, createModal } from "./markup-backoffice.js";
 import { postData } from "../modules/api.js";
 import { deleteData } from "./api-backoffice.js";
 
