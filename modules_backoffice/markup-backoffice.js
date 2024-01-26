@@ -10,7 +10,8 @@ export {
   brand,
   img,
   price,
-  deleteBtn
+  deleteBtn,
+  createModal
 };
 
 const dollsAdmin = await getObj();
@@ -42,8 +43,10 @@ const formattedHTMLCard = (doll) => {
   return `
     <div id="${doll._id}" class="card w-75 mb-3">
      <div class="card-body">
-       <h5 class="card-title">${doll.name}</h5>
-       <p class="card-text">${doll.description}</p>
+       <h5 class="card-title">Name: ${doll.name}</h5>
+       <p class="card-text">Description: ${doll.description}</p>
+       <p class="card-text">Brand: ${doll.brand}</p>
+       <p class="card-text">Price: ${doll.price}</p>
        <h6>ID: ${doll._id}</h6>
        <button type="button" class="btn btn-primary modify-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
       Modify
@@ -57,9 +60,8 @@ const formattedHTMLCard = (doll) => {
 
 const deleteBtn = document.getElementsByClassName("delete-button");
 
-const modifyDollModal = document.createElement("div");
 
-export const createModal = ({
+const createModal = ({
   _id = "",
   name = "",
   brand = "",
@@ -157,7 +159,7 @@ export const createModal = ({
         >
           Close
         </button>
-        <button type="button" class="btn btn-primary put-button">
+        <button type="button" class="btn btn-primary save-button">
           Save changes
         </button>
       </div>
@@ -166,7 +168,3 @@ export const createModal = ({
 </div>
 `;
 };
- 
-
-dollsDisplay.append(modifyDollModal);
-

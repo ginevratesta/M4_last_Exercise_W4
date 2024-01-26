@@ -39,6 +39,6 @@ const getObj = async () => {
     return data;
   } catch (error) {
     console.error("Error:" + error);
-    // alert(error);
+    alert(error);
   }
 };
