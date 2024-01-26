@@ -50,7 +50,7 @@ modifyBtn.forEach((putbtn) => {
   putbtn.addEventListener("click", async (event) => {
     const id = event.target.closest(".card").id;
     
-    let fetchDataId = async () => {
+    let fetchBarbieID = async () => {
       try {
         const response = await fetch(url + id, objGet);
         const productToEdit = await response.json();
@@ -60,26 +60,23 @@ modifyBtn.forEach((putbtn) => {
       }
     };
 
-    const productToEdit = await fetchDataId();
+    const barbieOBJ = await fetchBarbieID();
 
-    const inputID = document.querySelector("#input_ID");
     const inputTitle = document.querySelector("#input_name");
     const inputBrand = document.querySelector("#input_brand");
     const inputDescripition = document.querySelector("#input_desc");
     const inputImg = document.querySelector("#input_img");
     const inputPrice = document.querySelector("#input_price");
 
-    inputID.value = productToEdit._id;
-    inputTitle.value = productToEdit.name;
-    inputBrand.value = productToEdit.brand;
-    inputDescripition.value = productToEdit.description;
-    inputImg.value = productToEdit.imageUrl;  
-    inputPrice.value = productToEdit.price;
+    inputTitle.value = barbieOBJ.name;
+    inputBrand.value = barbieOBJ.brand;
+    inputDescripition.value = barbieOBJ.description;
+    inputImg.value = barbieOBJ.imageUrl;  
+    inputPrice.value = barbieOBJ.price;
 
     const saveBtn = document.querySelector(".save-button");
     saveBtn.addEventListener("click", async () => {
       const updatedProduct = {
-        _id: inputID.value,
         name: inputTitle.value,
         brand: inputBrand.value,
         description: inputDescripition.value,

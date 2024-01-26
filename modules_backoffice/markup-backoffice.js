@@ -90,15 +90,6 @@ const createModal = ({
       </div>
       <div class="modal-body">
         <form>
-        <div class="form-control">
-            <label for="title">ID</label>
-            <input
-              type="text"
-              value="${_id}"
-              id="input_ID"
-              name="ID"
-            />
-          </div>
           <div class="form-control">
             <label for="title">Title</label>
             <input
