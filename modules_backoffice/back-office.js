@@ -28,7 +28,6 @@ displayDollsOptions();
 
 addBtn.addEventListener("click", async () => {
   let barbie = {
-    _id: barbieId.value,
     name: title.value,
     description: description.value,
     brand: brand.value,
