@@ -27,6 +27,7 @@ dollsDisplay.classList.add(
 const formHolder = document.getElementById("form");
 const homePage = document.createElement("a");
 homePage.href = "./index.html";
+homePage.style.color = "#7C6ABF";
 homePage.textContent = "Homepage";
 formHolder.prepend(homePage);
 
@@ -44,7 +45,7 @@ const formattedHTMLCard = (doll) => {
        <h5 class="card-title">Name: ${doll.name}</h5>
        <p class="card-text">Description: ${doll.description}</p>
        <p class="card-text">Brand: ${doll.brand}</p>
-       <p class="card-text">Price: ${doll.price}</p>
+       <p class="card-text">Price: ${doll.price} $</p>
        <h6>ID: ${doll._id}</h6>
        <button type="button" class="btn btn-primary modify-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
       Modify

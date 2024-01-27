@@ -1,3 +1,7 @@
+body {
+  background-color: #f8f3f7;
+}
+
 .row img {
   aspect-ratio: 1/2;
   object-fit: cover;
@@ -8,6 +12,20 @@
   height: 250px;
   background-color: #e53d7a;
   color: white;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+}
+
+.card{
+  border-radius: 30px;
+  border: 2px solid #e53d7a;
+  overflow: hidden;
+}
+
+:root {
+  .btn-primary{
+  --bs-btn-bg: #7C6ABF;
+  --bs-btn-border-color: #7C6ABF;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #7C6ABF;
+  --bs-btn-hover-border-color: #7C6ABF;
+  };
 }

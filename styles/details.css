@@ -1,3 +1,10 @@
-#card h5{
-    color: #E53D7A;
+body {
+  background-color: #f8f3f7;
+}
+
+.card {
+  background-color: #7c6abf;
+  border-radius: 30px;
+  border: 2px solid #7c6abf;
+  overflow: hidden;
 }
