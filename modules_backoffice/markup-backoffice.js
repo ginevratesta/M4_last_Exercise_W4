@@ -10,7 +10,7 @@ export {
   img,
   price,
   deleteBtn,
-  createModal
+  createModal,
 };
 
 const dollsAdmin = await getObj();
@@ -25,13 +25,40 @@ dollsDisplay.classList.add(
 );
 
 const formHolder = document.getElementById("form");
+formHolder.classList.add("w-25", "ms-3", "mt-3")
+const containerIds = ["title", "brand", "content", "img", "price"];
+
+containerIds.forEach(function (id) {
+  const div = document.createElement("div");
+  div.classList.add("form-control", "d-flex", "justify-content-between");
+
+  const label = document.createElement("label");
+  label.setAttribute("for", id);
+  label.innerText = id.charAt(0).toUpperCase() + id.slice(1);
+
+  const input = document.createElement("input");
+  input.setAttribute("type", id === "price" ? "number" : "text");
+  input.setAttribute("id", id);
+  input.setAttribute("name", id);
+
+  div.appendChild(label);
+  div.appendChild(input);
+
+  formHolder.appendChild(div);
+});
+
 const homePage = document.createElement("a");
 homePage.href = "./index.html";
 homePage.style.color = "#7C6ABF";
 homePage.textContent = "Homepage";
 formHolder.prepend(homePage);
+const addBtn = document.createElement("button");
+addBtn.setAttribute("id", "post-button");
+addBtn.setAttribute("type", "button");
+addBtn.classList.add("btn", "btn-primary");
+addBtn.innerText = "Save changes";
+formHolder.appendChild(addBtn);
 
-const addBtn = document.getElementById("post-button");
 const title = document.getElementById("title");
 const description = document.getElementById("content");
 const brand = document.getElementById("brand");
@@ -58,7 +85,6 @@ const formattedHTMLCard = (doll) => {
 };
 
 const deleteBtn = document.getElementsByClassName("delete-button");
-
 
 const createModal = ({
   _id = "",

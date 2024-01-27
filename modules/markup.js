@@ -25,7 +25,7 @@ marketPlace.append(footer);
 
 const formattedHTMLCard = (doll) => {
   return `
-    <div class="col-lg-3">
+    <div class="col-lg-3 col-md-6">
     <div id="${doll._id}" class="card mb-5">
   <img src="${doll.imageUrl}" class="card-img-top" alt="Toy cover">
   <div class="card-body">
