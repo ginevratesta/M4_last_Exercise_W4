@@ -10,7 +10,7 @@ navBar.style.background = "#E53D7A";
 navBar.classList.add("w-100");
 navBar.innerHTML = `
 <h2 class="text-white text-center pt-5">Fabulous Marketplace</h2>
-<a class="text-white ps-3 d-block pb-3" href="./back-office.html">Back Office</a>`;
+<a class="text-white ps-3 d-block pb-3" href="./access-admin.html">Back Office</a>`;
 marketPlace.prepend(navBar);
 
 const row = document.createElement("div");
