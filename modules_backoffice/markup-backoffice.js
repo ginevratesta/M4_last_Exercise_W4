@@ -25,7 +25,7 @@ dollsDisplay.classList.add(
 );
 
 const formHolder = document.getElementById("form");
-formHolder.classList.add("px-4", "mt-3")
+formHolder.classList.add("px-4", "mt-4");
 const containerIds = ["title", "brand", "content", "img", "price"];
 
 containerIds.forEach(function (id) {
@@ -51,6 +51,7 @@ const homePage = document.createElement("a");
 homePage.href = "./index.html";
 homePage.style.color = "#7C6ABF";
 homePage.textContent = "Homepage";
+homePage.classList.add("d-block", "mb-3");
 formHolder.prepend(homePage);
 const addBtn = document.createElement("button");
 addBtn.setAttribute("id", "post-button");
@@ -69,7 +70,7 @@ const formattedHTMLCard = (doll) => {
   return `
     <div id="${doll._id}" class="card w-75 mb-3">
      <div class="card-body">
-       <h5 class="card-title">Name: ${doll.name}</h5>
+       <h5 class="card-title hot-pink">Name: ${doll.name}</h5>
        <p class="card-text">Description: ${doll.description}</p>
        <p class="card-text">Brand: ${doll.brand}</p>
        <p class="card-text">Price: ${doll.price} $</p>

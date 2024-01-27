@@ -1,5 +1,6 @@
 body {
-  background-color: #f8f3f7;
+  background-color: #f1e0ee;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .row img {
@@ -21,11 +22,13 @@ body {
 }
 
 :root {
-  .btn-primary{
-  --bs-btn-bg: #7C6ABF;
-  --bs-btn-border-color: #7C6ABF;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #7C6ABF;
-  --bs-btn-hover-border-color: #7C6ABF;
-  };
+  .btn-primary {
+    --bs-btn-bg: #7c6abf;
+    --bs-btn-border-color: #7c6abf;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #8f84b8;
+    --bs-btn-hover-border-color: #8f84b8;
+    --bs-btn-active-bg: #8f84b8;
+    --bs-btn-active-border-color: #8f84b8;
+  }
 }

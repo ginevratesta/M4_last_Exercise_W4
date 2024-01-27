@@ -35,9 +35,9 @@ const formattedHTMLDetail = (dollDetail) => {
       <img src="${dollDetail.imageUrl}" class="img-fluid rounded-start" alt="Barbie cover">
     </div>
     <div class="col-md-8">
-      <div class="card-body text-white pe-5 pt-5">
-        <h5 class="card-title">${dollDetail.name}</h5>
-        <p class="card-text">${dollDetail.description}</p>
+      <div class="d-flex flex-column justify-content-center h-100 align-items-center card-body text-white p-5 pt-5">
+        <h3 class="card-title mb-5">${dollDetail.name}</h3>
+        <p class="card-text text-center">${dollDetail.description}</p>
         <p class="card-text"><small class="text-body-secondary">Brand: ${dollDetail.brand}</small></p>
         <p class="card-text">Price: ${dollDetail.price} $</p>
       </div>

@@ -1,25 +1,35 @@
-:root {
-    .btn-primary{
-    --bs-btn-bg: #7C6ABF;
-    --bs-btn-border-color: #7C6ABF;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #7C6ABF;
-    --bs-btn-hover-border-color: #7C6ABF;
-    };
-  }
+body {
+  background-color: #f1e0ee;
+}
 
-#form{
+.hot-pink{
+  color: #e53d7a;
+}
+
+:root {
+  .btn-primary {
+    --bs-btn-bg: #7c6abf;
+    --bs-btn-border-color: #7c6abf;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #8f84b8;
+    --bs-btn-hover-border-color: #8f84b8;
+    --bs-btn-active-bg: #8f84b8;
+    --bs-btn-active-border-color: #8f84b8;
+  }
+}
+
+#form {
   width: 25%;
 }
 
-@media screen and (max-width: 1273px){
-#form{
-  width: 50%;
-};
+@media screen and (max-width: 1273px) {
+  #form {
+    width: 50%;
+  }
 }
 
-@media screen and (max-width: 649px){
-  #form{
+@media screen and (max-width: 649px) {
+  #form {
     width: 100%;
-  };
   }
+}
