@@ -2,6 +2,12 @@ export {submitBtn, inputPass};
 
 const adminZoneAccess = document.getElementById("admin-zone-access");
 
+const backHome = document.createElement("a");
+backHome.href = "./index.html";
+backHome.textContent = "Go back";
+backHome.classList.add("soft-purple", "d-block", "text-end", "pt-4", "pe-4");
+adminZoneAccess.appendChild(backHome);
+
 const adminImgBarbie = document.createElement("img");
 adminImgBarbie.src = "./assets/barbieAdmin.png";
 adminImgBarbie.classList.add("positioning-img","mt-4");
