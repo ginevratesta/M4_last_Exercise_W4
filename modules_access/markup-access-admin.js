@@ -4,7 +4,7 @@ const adminZoneAccess = document.getElementById("admin-zone-access");
 
 const adminImgBarbie = document.createElement("img");
 adminImgBarbie.src = "./assets/barbieAdmin.png";
-adminImgBarbie.classList.add("positioning-img");
+adminImgBarbie.classList.add("positioning-img","mt-4");
 adminZoneAccess.appendChild(adminImgBarbie);
 
 const accessForm = document.createElement("form");
