@@ -1,0 +1,24 @@
+body {
+  background-color: #f1e0ee;
+}
+
+.soft-purple {
+  color: #7c6abf;
+}
+
+.positioning-img{
+    width: 25%;
+    margin-left: 38%;
+}
+
+:root {
+  .btn-primary {
+    --bs-btn-bg: #7c6abf;
+    --bs-btn-border-color: #7c6abf;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #8f84b8;
+    --bs-btn-hover-border-color: #8f84b8;
+    --bs-btn-active-bg: #8f84b8;
+    --bs-btn-active-border-color: #8f84b8;
+  }
+}

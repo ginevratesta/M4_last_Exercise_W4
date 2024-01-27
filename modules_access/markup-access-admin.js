@@ -2,21 +2,25 @@ export {submitBtn, inputPass};
 
 const adminZoneAccess = document.getElementById("admin-zone-access");
 
+const adminImgBarbie = document.createElement("img");
+adminImgBarbie.src = "./assets/barbieAdmin.png";
+adminImgBarbie.classList.add("positioning-img");
+adminZoneAccess.appendChild(adminImgBarbie);
+
 const accessForm = document.createElement("form");
-accessForm.classList.add("pt-5", "px-4", "d-flex", "flex-column", "justify-content-center", "align-items-center");
+accessForm.classList.add("px-4", "d-flex", "flex-column", "justify-content-center", "align-items-center");
 adminZoneAccess.appendChild(accessForm);
 
 const formTitle = document.createElement("h2");
-formTitle.textContent = "Insert here your Admin password to access back office";
-formTitle.classList.add("text-center");
+formTitle.textContent = "Insert your Admin password here to access back office";
+formTitle.classList.add("text-center", "soft-purple");
 accessForm.appendChild(formTitle);
 
 const holder = document.createElement("div");
-holder.classList.add("mb-3");
+holder.classList.add("mb-2");
 accessForm.appendChild(holder);
 
 const label = document.createElement("label");
-label.textContent = "Insert your password here";
 label.setAttribute("for", "exampleInputPassword1");
 label.classList.add("form-label");
 holder.appendChild(label);
@@ -33,3 +37,6 @@ submitBtn.setAttribute("id", "password");
 submitBtn.classList.add("btn", "btn-primary")
 submitBtn.textContent = "Submit";
 accessForm.appendChild(submitBtn);
+
+
+
