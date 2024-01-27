@@ -7,3 +7,19 @@
     --bs-btn-hover-border-color: #7C6ABF;
     };
   }
+
+#form{
+  width: 25%;
+}
+
+@media screen and (max-width: 1273px){
+#form{
+  width: 50%;
+};
+}
+
+@media screen and (max-width: 649px){
+  #form{
+    width: 100%;
+  };
+  }

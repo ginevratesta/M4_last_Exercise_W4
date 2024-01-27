@@ -25,7 +25,7 @@ dollsDisplay.classList.add(
 );
 
 const formHolder = document.getElementById("form");
-formHolder.classList.add("w-25", "ms-3", "mt-3")
+formHolder.classList.add("px-4", "mt-3")
 const containerIds = ["title", "brand", "content", "img", "price"];
 
 containerIds.forEach(function (id) {
@@ -55,7 +55,7 @@ formHolder.prepend(homePage);
 const addBtn = document.createElement("button");
 addBtn.setAttribute("id", "post-button");
 addBtn.setAttribute("type", "button");
-addBtn.classList.add("btn", "btn-primary");
+addBtn.classList.add("btn", "btn-primary", "mt-3");
 addBtn.innerText = "Save changes";
 formHolder.appendChild(addBtn);
 
@@ -117,7 +117,7 @@ const createModal = ({
       </div>
       <div class="modal-body">
         <form>
-          <div class="form-control">
+          <div class="form-control d-flex justify-content-between">
             <label for="title">Title</label>
             <input
               type="text"
@@ -127,7 +127,7 @@ const createModal = ({
             />
           </div>
 
-          <div class="form-control">
+          <div class="form-control d-flex justify-content-between">
             <label for="brand">Brand</label>
             <input
               type="text"
@@ -136,7 +136,7 @@ const createModal = ({
               name="brand"
             />
           </div>
-          <div class="form-control">
+          <div class="form-control d-flex justify-content-between">
             <label for="content">Content</label>
             <input
               type="text"
@@ -146,7 +146,7 @@ const createModal = ({
             />
           </div>
 
-          <div class="form-control">
+          <div class="form-control d-flex justify-content-between">
             <label for="img">Image URL</label>
             <input
               type="text"
@@ -156,7 +156,7 @@ const createModal = ({
             />
           </div>
 
-          <div class="form-control">
+          <div class="form-control d-flex justify-content-between">
             <label for="price">Price</label>
             <input
               type="number"
