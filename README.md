@@ -18,7 +18,7 @@ Open the index.html file in a web browser to explore the Barbie marketplace.
 
 ## Pages version - no installation needed
 open the following link to view and try the project without downloading repository:
-https://ginevratesta.github.io/M4_last_Exercise_W4/index.html
+https://ginevratesta.github.io/M4_last_Exercise_W4/
 
 P.S. password to access back office is "barbieAdmin".
 
